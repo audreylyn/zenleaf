@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Essential Herbs for Gut Health</title>
+    
+    <!-- Vendor CSS (Bootstrap and Fonts) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/paymentfont@latest/css/paymentfont.min.css">
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="../css/reset-style.css">
+
+    <!-- Custom Component CSS -->
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/components/blog.css">
+
+
+
+</head>
+<body>
+    <header class="header_main">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand header_logo" href="#">
+                    <img src="../assets/images/icons/logo_header.svg" alt="logo" class="img-fluid" style="width: 150px;">
+                </a>
+
+                <!-- Mobile Actions Group -->
+                <div class="mobile-actions d-flex d-lg-none align-items-center">
+                    <a class="nav-link mobile-cart" href="./cart.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"></path>
+                        </svg>
+                    </a>
+                    <a class="nav-link mobile-wishlist" href="./wishlist.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"></path>
+                        </svg>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="menu_lists navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html#hero-section">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#deals">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#testimonial">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#contact">Contact</a>
+                        </li>
+                        <!-- Mobile-only login button -->
+                        <li class="nav-items d-lg-none mobile-login mt-3">
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-outline-success w-100">Login</button>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Desktop Actions -->
+                    <ul class="navbar-nav desktop-actions ms-auto d-none d-lg-flex">
+                        <li class="nav-item me-3">
+                            <a class="nav-link cart" href="./cart.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link wishlist" href="./wishlist.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item login">
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-outline-success">Login</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="blog-container">
+        <article>
+            <header>
+                <div class="blog-header">
+                    <div class="category-badge">Health & Wellness</div>
+                    <h2 class="blog-title">10 Essential Herbs for Gut Health</h2>
+                </div>
+                <div class="post-meta">
+                    <span><i class="fas fa-user"></i>Audreylyn Morana</span>
+                    <span><i class="fas fa-clock"></i>January 9, 2025</span>
+                    <span><i class="fas fa-heart"></i>200 Likes</span>
+                </div>
+            </header>
+
+            <img src="../assets/images/blog/blog1.jpg" alt="Various herbs for gut health" class="featured-image">
+
+            <div class="blog-content">
+                <p>Herbs have been used for centuries to promote gut health and improve digestion. In this comprehensive guide, we will explore ten essential herbs that can help maintain a healthy gut microbiome, reduce bloating, and enhance overall well-being. These natural remedies have been backed by both traditional wisdom and modern scientific research, offering a holistic approach to digestive health.</p>
+
+                <h3>1. Peppermint</h3>
+                <p>Peppermint is renowned for its soothing properties and has been a go-to remedy for digestive issues for generations. It helps alleviate symptoms of irritable bowel syndrome (IBS) and promotes smoother digestion through its natural antispasmodic properties. The menthol in peppermint helps relax the digestive tract muscles, reducing cramping and discomfort.</p>
+                <p>Research has shown that peppermint oil can significantly improve IBS symptoms in up to 40% of patients. It's particularly effective when consumed as a tea after meals or taken in enteric-coated capsule form for more severe digestive issues.</p>
+
+                <h3>2. Ginger</h3>
+                <p>Ginger is a powerful digestive aid that has been used in traditional medicine for thousands of years. This remarkable root helps stimulate digestion, reduces inflammation, and effectively combats nausea and indigestion. Its active compounds, including gingerols and shogaols, promote gastric emptying and help maintain healthy gut mobility.</p>
+                <p>Beyond its digestive benefits, ginger also supports the immune system and helps reduce inflammation throughout the body. You can enjoy it fresh, dried, or as a tea, making it one of the most versatile digestive herbs available.</p>
+
+                <h3>3. Fennel</h3>
+                <p>Fennel seeds are excellent for reducing bloating and gas, making them a perfect after-dinner digestive aid. These aromatic seeds contain compounds that help relax the digestive tract and stimulate the production of digestive enzymes, improving nutrient absorption and reducing discomfort.</p>
+                <p>Traditional cultures have long practiced chewing fennel seeds after meals, and modern science has validated this practice. Studies show that fennel can help reduce inflammation in the intestines and support healthy gut bacteria growth.</p>
+
+                <h3>4. Chamomile</h3>
+                <p>Chamomile is nature's gentle soother, perfect for calming both the mind and the digestive system. This herb contains various compounds that help reduce inflammation and promote relaxation of the digestive muscles. It's particularly effective for stress-related digestive issues and can help improve sleep quality, which is crucial for gut health.</p>
+                <p>Regular consumption of chamomile tea has been linked to reduced symptoms of acid reflux and improved digestion. Its mild flavor and calming properties make it an excellent choice for evening consumption.</p>
+
+                <h3>5. Turmeric</h3>
+                <p>Turmeric, with its active compound curcumin, is a powerful anti-inflammatory herb that supports gut health in multiple ways. It helps protect the gut lining, reduces inflammation, and supports the growth of beneficial gut bacteria. Research has shown that turmeric can help prevent and treat various digestive disorders.</p>
+                <p>For maximum absorption, combine turmeric with black pepper, which contains piperine, a compound that enhances curcumin absorption by up to 2000%.</p>
+
+                <h3>6. Marshmallow Root</h3>
+                <p>Marshmallow root contains mucilage, a substance that becomes gel-like when mixed with water. This property makes it excellent for coating and soothing irritated digestive tract tissues. It's particularly helpful for those with leaky gut syndrome or inflammatory bowel conditions.</p>
+                <p>Traditional herbalists often recommend marshmallow root tea or tinctures for various digestive complaints, including heartburn and stomach ulcers.</p>
+
+                <h3>7. Slippery Elm</h3>
+                <p>Slippery elm bark is another herb rich in mucilage, providing soothing relief for various digestive issues. It forms a protective layer over irritated tissues and can help reduce inflammation in the digestive tract. This herb is particularly beneficial for those with acid reflux or inflammatory bowel conditions.</p>
+                <p>Modern research supports its traditional uses, showing that slippery elm can help improve symptoms of IBD and IBS when used as part of a comprehensive treatment approach.</p>
+
+                <h3>8. Licorice Root</h3>
+                <p>Licorice root has been used in traditional medicine for centuries to treat various digestive issues. It contains compounds that help protect the stomach lining and can increase the production of protective mucus. This herb is particularly effective for treating acid reflux and stomach ulcers.</p>
+                <p>When using licorice root, it's important to choose DGL (deglycyrrhizinated licorice) for long-term use, as regular licorice can affect blood pressure in some individuals.</p>
+
+                <h3>9. Oregon Grape Root</h3>
+                <p>Oregon grape root contains berberine, a compound known for its antimicrobial properties. It helps maintain a healthy balance of gut bacteria and can be particularly useful for treating bacterial overgrowth in the small intestine. This herb also stimulates bile production, which aids in fat digestion.</p>
+                <p>Research has shown that berberine-containing herbs like Oregon grape root can help improve gut barrier function and reduce inflammation.</p>
+
+                <h3>10. Calendula</h3>
+                <p>Calendula flowers possess powerful anti-inflammatory and healing properties that can benefit the entire digestive system. This herb helps reduce inflammation, supports the growth of healthy gut bacteria, and can help heal damaged intestinal tissue.</p>
+                <p>Calendula tea or tincture can be particularly helpful for those with inflammatory bowel conditions or leaky gut syndrome.</p>
+
+                <h3>Incorporating Herbs Into Your Daily Routine</h3>
+                <p>When adding these herbs to your diet, it's important to start slowly and observe how your body responds. Each person's digestive system is unique, and what works well for one person may not be as effective for another. Consider starting with one herb at a time and gradually incorporating others as needed.</p>
+
+                <h3>Precautions and Considerations</h3>
+                <p>While these herbs are generally safe for most people, it's important to consult with a healthcare provider before starting any new herbal regimen, especially if you're pregnant, nursing, taking medications, or have existing health conditions. Some herbs can interact with medications or may not be suitable for certain conditions.</p>
+            </div>
+
+            <div class="tag-container">
+                <span class="tag">Herbal Remedies</span>
+                <span class="tag">Gut Health</span>
+                <span class="tag">Wellness</span>
+                <span class="tag">Healthy Living</span>
+                <span class="tag">Natural Medicine</span>
+                <span class="tag">Digestive Health</span>
+            </div>
+
+            <div class="author-section">
+                <img src="../assets/images/review/lisa.jpg" alt="Audreylyn Morana" class="author-image">
+                <h3>Audreylyn Morana</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/audreylyn.morana/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/audsmrn" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/AudreylynM?t=q4alIy9wbdiw5NKEAXmv0Q&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Modern Post Navigation -->
+            <div>         
+                <div class="nav-post next-post">
+                    <a href="../pages/blog-2.html" class="blog-link">
+                        Next Post
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <div class="article-preview">
+                        <a href="../pages/blog-2.html">
+                            <img src="../assets/images/blog/blog2.jpg" alt="Medicinal herbs" class="preview-image">
+                        </a>
+                        <div class="article-info">
+                            <div class="category-label">
+                                <a href="#">Gardening & Wellness</a>
+                            </div>
+                            <a href="../pages/blog-2.html" class="article-title">
+                                9 Herbs to grow in your garden this spring!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer id="footer" role="contentinfo">
+        <div class="container__footer">
+            <div class="zen-container">
+                <!-- Logo and description section -->
+                <div class="zen-wrapper">
+                    <div class="zen-img">
+                        <img src="../assets/images/icons/logo_footer.svg" alt="Zen Leaf Plants Service Logo">
+                    </div>
+                    <p class="footer-info">
+                        Your trusted source for premium plants, sustainable gardening supplies, and expert guidance. With over a decade of experience, we specialize in rare and exotic plants, organic plant care supplements, and professional gardening tools. Our commitment to quality and expert knowledge ensures your gardening success, while our sustainable practices support environmental stewardship. From beginners to seasoned plant enthusiasts, we're here to help you create and maintain your perfect green sanctuary.
+                    </p>
+                </div>
+
+                <!-- Navigation section -->
+                <nav>
+                    <ul class="list-link" role="navigation" aria-label="Footer navigation">
+                        <li><a class="footer-link" href="../index.html#hero-section">Home</a></li>
+                        <li><a class="footer-link" href="../index.html#about">About</a></li>
+                        <li><a class="footer-link" href="../index.html#deals">Shop</a></li>
+                        <li><a class="footer-link" href="../index.html#blogs">Blogs</a></li>
+                        <li><a class="footer-link" href="../index.html#testimonial">Reviews</a></li>
+                        <li><a class="footer-link" href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <hr>
+
+            <!-- Footer bottom section -->
+            <div class="footer-end">
+                <p class="footer__copy">© 2025 Zen Leaf Plants Service. All rights reserved</p>
+                <div class="footer__cards">
+                    <i class="pf pf-paypal footer__card" aria-label="PayPal"></i>
+                    <i class="pf pf-visa footer__card" aria-label="Visa"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

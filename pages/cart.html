@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Reset or Base Styles -->
+    <link rel="stylesheet" href="../css/reset-style.css">
+
+    <!-- Payment Font CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/paymentfont@latest/css/paymentfont.min.css">
+
+    <!-- Component-Specific Custom CSS -->
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/components/cart.css">
+
+</head>
+<body>
+
+    <header class="header_main">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand header_logo" href="#">
+                    <img src="../assets/images/icons/logo_header.svg" alt="logo" class="img-fluid" style="width: 150px;">
+                </a>
+
+                <!-- Mobile Actions Group -->
+                <div class="mobile-actions d-flex d-lg-none align-items-center">
+                    <a class="nav-link mobile-cart" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"></path>
+                        </svg>
+                    </a>
+                    <a class="nav-link mobile-wishlist" href="./wishlist.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"></path>
+                        </svg>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="menu_lists navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html#hero-section">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#deals">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#testimonial">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#contact">Contact</a>
+                        </li>
+                        <!-- Mobile-only login button -->
+                        <li class="nav-items d-lg-none mobile-login mt-3">
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-outline-success w-100">Login</button>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Desktop Actions -->
+                    <ul class="navbar-nav desktop-actions ms-auto d-none d-lg-flex">
+                        <li class="nav-item me-3">
+                            <a class="nav-link cart" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link wishlist" href="./wishlist.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item login">
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-outline-success">Login</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="wrapped">
+        <section class="shopping-cart-container">
+            <article class="shopping-cart">
+                <div class="shopping-cart-header">
+                    <h3 class="cart-title">Shopping Cart</h3>
+                    <h3 class="cart-no-items">2 Items</h3>
+                </div>
+                <hr>
+
+                <table class="shopping-cart">
+                    <thead>
+                        <tr>
+                            <th>product details</th>
+                            <th>quantity</th>
+                            <th>price</th>
+                            <th>total</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="cartItems">
+
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <button class="continue-shop">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M10 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                        <path d="M5.001 8h13.999a2 2 0 0 1 1.977 2.304l-1.255 7.152a3 3 0 0 1 -2.966 2.544h-9.512a3 3 0 0 1 -2.965 -2.544l-1.255 -7.152a2 2 0 0 1 1.977 -2.304z"></path>
+                                        <path d="M17 10l-2 -6"></path>
+                                        <path d="M7 10l2 -6"></path>
+                                      </svg>
+                                    <a href="../index.html">Continue Shopping</a></button>
+                            </td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+
+            </article>
+
+
+            <article class="order-summary">
+                <h3 class="order-summary-title">Order Summary</h3>
+                <hr>
+
+                <div class="promo-code">
+                    <label for="promo-codes">promo code</label>
+                    <input type="text" name="promo-codes">
+
+                    <button class="apply-btn">APPLY</button>
+                </div>
+                <hr>
+
+                <div class="order-info">
+                    <h4>TOTAL COST</h4>
+                    <h4>₱80</h4>
+                </div>
+                <a class="checkout" href="./thanks.html">checkout</a>
+            </article>
+        </section>
+    </main>
+
+    <footer id="footer" role="contentinfo">
+        <div class="container__footer">
+            <div class="zen-container">
+                <!-- Logo and description section -->
+                <div class="zen-wrapper">
+                    <div class="zen-img">
+                        <img src="../assets/images/icons/logo_footer.svg" alt="Zen Leaf Plants Service Logo">
+                    </div>
+                    <p class="footer-info">
+                        Your trusted source for premium plants, sustainable gardening supplies, and expert guidance. With over a decade of experience, we specialize in rare and exotic plants, organic plant care supplements, and professional gardening tools. Our commitment to quality and expert knowledge ensures your gardening success, while our sustainable practices support environmental stewardship. From beginners to seasoned plant enthusiasts, we're here to help you create and maintain your perfect green sanctuary.
+                    </p>
+                </div>
+
+                <!-- Navigation section -->
+                <nav>
+                    <ul class="list-link" role="navigation" aria-label="Footer navigation">
+                        <li><a class="footer-link" href="../index.html#hero-section">Home</a></li>
+                        <li><a class="footer-link" href="../index.html#about">About</a></li>
+                        <li><a class="footer-link" href="../index.html#deals">Shop</a></li>
+                        <li><a class="footer-link" href="../index.html#blogs">Blogs</a></li>
+                        <li><a class="footer-link" href="../index.html#testimonial">Reviews</a></li>
+                        <li><a class="footer-link" href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <hr>
+
+            <!-- Footer bottom section -->
+            <div class="footer-end">
+                <p class="footer__copy">© 2025 Zen Leaf Plants Service. All rights reserved</p>
+                <div class="footer__cards">
+                    <i class="pf pf-paypal footer__card" aria-label="PayPal"></i>
+                    <i class="pf pf-visa footer__card" aria-label="Visa"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../js/cart.js"></script>
+    <script src="../js/shop.js"></script>
+</body>
+</html>

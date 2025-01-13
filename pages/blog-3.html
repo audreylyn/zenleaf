@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Essential Herbs for Gut Health</title>
+    
+    <!-- Vendor CSS (Bootstrap and Fonts) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/paymentfont@latest/css/paymentfont.min.css">
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="../css/reset-style.css">
+
+    <!-- Custom Component CSS -->
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/components/blog.css">
+
+
+
+
+</head>
+<body>
+    <header class="header_main">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand header_logo" href="#">
+                    <img src="../assets/images/icons/logo_header.svg" alt="logo" class="img-fluid" style="width: 150px;">
+                </a>
+
+                <!-- Mobile Actions Group -->
+                <div class="mobile-actions d-flex d-lg-none align-items-center">
+                    <a class="nav-link mobile-cart" href="./cart.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"></path>
+                        </svg>
+                    </a>
+                    <a class="nav-link mobile-wishlist" href="./wishlist.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"></path>
+                        </svg>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="menu_lists navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html#hero-section">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#deals">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#testimonial">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#contact">Contact</a>
+                        </li>
+                        <!-- Mobile-only login button -->
+                        <li class="nav-items d-lg-none mobile-login mt-3">
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-outline-success w-100">Login</button>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Desktop Actions -->
+                    <ul class="navbar-nav desktop-actions ms-auto d-none d-lg-flex">
+                        <li class="nav-item me-3">
+                            <a class="nav-link cart" href="./cart.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link wishlist" href="./wishlist.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item login">
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-outline-success">Login</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="blog-container">
+        <article>
+            <header>
+                <div class="blog-header">
+                    <div class="category-badge">Health & Wellness</div>
+                    <h2 class="blog-title">Top 5 Herbal Teas for Relaxation</h2>
+                </div>
+                <div class="post-meta">
+                    <span><i class="fas fa-user"></i>Audreylyn Morana</span>
+                    <span><i class="fas fa-clock"></i>January 11, 2025</span>
+                    <span><i class="fas fa-heart"></i>150 Likes</span>
+                </div>
+            </header>
+        
+            <img src="../assets/images/blog/blog3.jpg" alt="Herbal teas for relaxation" class="featured-image">
+        
+            <div class="blog-content">
+                <p>Relaxation is essential for maintaining a healthy mind and body, and herbal teas offer a natural way to unwind after a long day. In this guide, we’ll explore five herbal teas that are renowned for their calming properties and how they can help reduce stress, improve sleep, and promote overall well-being.</p>
+        
+                <h3>1. Chamomile Tea</h3>
+                <p>Chamomile tea is one of the most popular herbal teas for relaxation. Its mild flavor and soothing properties make it an excellent choice before bedtime. Chamomile contains apigenin, an antioxidant that binds to certain receptors in your brain, promoting sleepiness and reducing insomnia.</p>
+                <p>Regular consumption of chamomile tea has been shown to improve sleep quality and reduce symptoms of anxiety, making it a staple for those seeking tranquility.</p>
+        
+                <h3>2. Lavender Tea</h3>
+                <p>Known for its fragrant aroma, lavender tea is a natural stress reliever. The calming effects of lavender can help reduce anxiety, promote better sleep, and alleviate headaches. Its floral flavor pairs well with honey, making it a delightful evening beverage.</p>
+                <p>Studies suggest that lavender may help lower cortisol levels, the hormone responsible for stress, helping you relax more effectively.</p>
+        
+                <h3>3. Peppermint Tea</h3>
+                <p>Peppermint tea not only soothes the digestive system but also calms the mind. Its menthol content provides a refreshing taste while helping to reduce stress and fatigue. Peppermint tea is caffeine-free, making it an ideal choice for relaxation at any time of day.</p>
+                <p>Research has found that the scent of peppermint can enhance mood and mental clarity, offering both relaxation and revitalization.</p>
+        
+                <h3>4. Lemon Balm Tea</h3>
+                <p>Lemon balm, a member of the mint family, is known for its mild lemony flavor and calming effects. This herb has been used for centuries to reduce anxiety and improve sleep. Lemon balm tea is particularly effective for people experiencing restlessness or mild insomnia.</p>
+                <p>Modern studies support its traditional use, showing that lemon balm can enhance mood and promote relaxation when consumed regularly.</p>
+        
+                <h3>5. Passionflower Tea</h3>
+                <p>Passionflower tea is a lesser-known but powerful relaxant. It works by increasing levels of gamma-aminobutyric acid (GABA) in the brain, which reduces brain activity and promotes a sense of calm. This makes passionflower tea an excellent choice for those battling anxiety or sleeplessness.</p>
+                <p>Enjoy a warm cup of passionflower tea before bed to help ease into a restful night’s sleep.</p>
+        
+                <h3>Incorporating Herbal Teas into Your Routine</h3>
+                <p>To make the most of these herbal teas, consider drinking them in a quiet, relaxing environment. Combine your tea-drinking ritual with mindfulness or meditation to enhance the calming effects. For best results, choose high-quality, organic teas to avoid any unwanted additives.</p>
+        
+                <h3>Precautions and Considerations</h3>
+                <p>While herbal teas are generally safe, some may interact with medications or cause allergic reactions in sensitive individuals. Always consult with a healthcare provider if you have existing health conditions or are pregnant before adding herbal teas to your routine.</p>
+            </div>
+        
+            <div class="tag-container">
+                <span class="tag">Herbal Teas</span>
+                <span class="tag">Relaxation</span>
+                <span class="tag">Stress Relief</span>
+                <span class="tag">Wellness</span>
+                <span class="tag">Healthy Living</span>
+            </div>
+        
+            <div class="author-section">
+                <img src="../assets/images/review/lisa.jpg" alt="Audreylyn Morana" class="author-image">
+                <h3>Audreylyn Morana</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/audreylyn.morana/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/audsmrn" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/AudreylynM?t=q4alIy9wbdiw5NKEAXmv0Q&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Modern Post Navigation -->
+            <div>
+                <div class="nav-post prev-post">
+                    <a href="../pages/blog-2.html" class="blog-link">
+                        <i class="fas fa-chevron-left"></i>
+                        Previous Post
+                    </a>
+                    <div class="article-preview">
+                        <a href="../pages/blog-2.html">
+                            <img src="../assets/images/blog/blog2.jpg" alt="Herbal teas" class="preview-image">
+                        </a>
+                        <div class="article-info">
+                            <div class="category-label">
+                                <a href="#">Gardening & Wellness</a>
+                            </div>
+                            <a href="../pages/blog-2.html" class="article-title">
+                                9 Herbs To Grow In Your Garden This Spring!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer id="footer" role="contentinfo">
+        <div class="container__footer">
+            <div class="zen-container">
+                <!-- Logo and description section -->
+                <div class="zen-wrapper">
+                    <div class="zen-img">
+                        <img src="../assets/images/icons/logo_footer.svg" alt="Zen Leaf Plants Service Logo">
+                    </div>
+                    <p class="footer-info">
+                        Your trusted source for premium plants, sustainable gardening supplies, and expert guidance. With over a decade of experience, we specialize in rare and exotic plants, organic plant care supplements, and professional gardening tools. Our commitment to quality and expert knowledge ensures your gardening success, while our sustainable practices support environmental stewardship. From beginners to seasoned plant enthusiasts, we're here to help you create and maintain your perfect green sanctuary.
+                    </p>
+                </div>
+
+                <!-- Navigation section -->
+                <nav>
+                    <ul class="list-link" role="navigation" aria-label="Footer navigation">
+                        <li><a class="footer-link" href="../index.html#hero-section">Home</a></li>
+                        <li><a class="footer-link" href="../index.html#about">About</a></li>
+                        <li><a class="footer-link" href="../index.html#deals">Shop</a></li>
+                        <li><a class="footer-link" href="../index.html#blogs">Blogs</a></li>
+                        <li><a class="footer-link" href="../index.html#testimonial">Reviews</a></li>
+                        <li><a class="footer-link" href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <hr>
+
+            <!-- Footer bottom section -->
+            <div class="footer-end">
+                <p class="footer__copy">© 2025 Zen Leaf Plants Service. All rights reserved</p>
+                <div class="footer__cards">
+                    <i class="pf pf-paypal footer__card" aria-label="PayPal"></i>
+                    <i class="pf pf-visa footer__card" aria-label="Visa"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+const createModalBackground=()=>{const modalBg=document.createElement('div');modalBg.className='modal-bg';modalBg.style.cssText=`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 997;
+    display: none;
+    `;document.body.appendChild(modalBg);return modalBg};const initializeModal=()=>{const modalBg=createModalBackground();const viewPopover=document.getElementById('view-popover');const closeBtn=document.querySelector('.close-btn');const showModalBg=()=>{modalBg.style.display='block';document.body.style.overflow='hidden'};const hideModalBg=()=>{modalBg.style.display='none';document.body.style.overflow=''};document.querySelectorAll('[popovertarget="view-popover"]').forEach(button=>{button.addEventListener('click',()=>{showModalBg();updateModalContent(button.closest('.product-item'))})});closeBtn.addEventListener('click',hideModalBg);modalBg.addEventListener('click',(e)=>{if(e.target===modalBg){hideModalBg();viewPopover.hidePopover()}});viewPopover.addEventListener('beforetoggle',(event)=>{if(event.newState==='closed'){hideModalBg()}})};const updateModalContent=(productElement)=>{if(!productElement)return;const modal=document.getElementById('view-popover');const productImg=productElement.querySelector('.feat-item-img img');const productName=productElement.querySelector('.feat-item-name h4');const productPrice=productElement.querySelector('.feat-item-price span:last-child');const productDesc=productElement.querySelector('.feat-item-desc');if(modal){const modalImg=modal.querySelector('.modal-img img');const modalTitle=modal.querySelector('.item-title');const modalPrice=modal.querySelector('.item-price');const modalDesc=modal.querySelector('.item-desc');if(productImg)modalImg.src=productImg.src;if(productName)modalTitle.textContent=productName.textContent;if(productPrice)modalPrice.textContent=productPrice.textContent;if(productDesc)modalDesc.textContent=productDesc.textContent}};document.addEventListener('DOMContentLoaded',initializeModal)

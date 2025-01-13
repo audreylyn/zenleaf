@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Leaf</title>
+
+    <!-- Vendor CSS (External libraries and frameworks) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/paymentfont@latest/css/paymentfont.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/reset-style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+
+
+</head>
+<body>
+
+    <header class="header_main">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand header_logo" href="#">
+                    <img src="./assets/images/icons/logo_header.svg" alt="logo" class="img-fluid" style="width: 150px;">
+                </a>
+
+                <!-- Mobile Actions Group -->
+                <div class="mobile-actions d-flex d-lg-none align-items-center">
+                    <a class="nav-link mobile-cart" href="./pages/cart.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"></path>
+                        </svg>
+                    </a>
+                    <a class="nav-link mobile-wishlist" href="./pages/wishlist.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"></path>
+                        </svg>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="menu_lists navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#hero-section">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#deals">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonial">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <!-- Mobile-only login button -->
+                        <li class="nav-items d-lg-none mobile-login mt-3">
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-outline-success w-100">Login</button>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Desktop Actions -->
+                    <ul class="navbar-nav desktop-actions ms-auto d-none d-lg-flex">
+                        <li class="nav-item me-3">
+                            <a class="nav-link cart" href="./pages/cart.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link wishlist" href="./pages/wishlist.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item login">
+                            <a class="nav-link" href="#">
+                                <button class="btn btn-outline-success">Login</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="wrapped">
+        <section id="hero-section">
+            <div class="carousel">
+                <div class="list">
+
+                </div>
+                <div class="arrows">
+                    <button id="prev" aria-label="Previous">&lt;</button>
+                    <button id="next" aria-label="Next">&gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="mb-5">Get started with <span>ZEN</span> LEAF</h2>
+                    </div>
+                    <div class="col-lg-2 col-12 mt-auto mb-auto">
+                        <ul class="nav nav-pills mb-5 mx-auto justify-content-center align-items-center" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Introduction</button>
+                            </li>
+    
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-youtube-tab" data-bs-toggle="pill" data-bs-target="#pills-youtube" type="button" role="tab" aria-controls="pills-youtube" aria-selected="true">Tips & Tricks</button>
+                            </li>
+    
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-skill-tab" data-bs-toggle="pill" data-bs-target="#pills-skill" type="button" role="tab" aria-controls="pills-skill" aria-selected="false">Products</button>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-lg-10 col-12">
+                        <div class="tab-content mt-2" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    
+                                <div class="row">
+                                    <div class="col-lg-7 col-12">
+                                        <img src="https://res.cloudinary.com/dcd6y2awx/image/upload/f_auto,q_auto/v1/PlantSeller/UI%20Images/header-images" class="img-fluid" alt="">
+                                    </div>
+    
+                                    <div class="col-lg-5 col-12">
+                                        <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
+                                            <h4 class="mb-3">Our Vision at <span>Zen</span> Leaf</h4>
+    
+                                            <p class="p-about">Welcome to Zen Leaf, your go-to destination for all things green and vibrant! Transform your home and garden with our curated collection of plants, tools, and decor.</p>
+    
+                                            <p class="p-about">At Zen Leaf, we make it easy to bring nature indoors and outdoors. Shop now and start creating your serene, sustainable, and stylish green space today!</p>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="tab-pane fade" id="pills-youtube" role="tabpanel" aria-labelledby="pills-youtube-tab">
+    
+                                <div class="row">
+                                    <div class="col-lg-7 col-12">
+                                        <div class="ratio ratio-16x9">                                              
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/pLQuIuokP6Q?si=qqc8UsBKq29yXjk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-12">
+                                        <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
+                                            <h4 class="mb-3"><span>PLANT</span> Your World</h4>
+    
+                                            <p class="p-about">From rare indoor plants to expert-curated gardening supplies, discover everything you need to create your perfect green space. Each plant comes with care guides and lifetime support from our horticulturists.</p>
+    
+                                            <div class="mt-2 mt-lg-auto">
+                                                <a href="#contact" class="custom-link mb-2 grow">
+                                                    Grow with us
+                                                    <i class="bi-arrow-right ms-2"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="tab-pane fade" id="pills-skill" role="tabpanel" aria-labelledby="pills-skill-tab">
+                                <div class="row">
+                                    <div class="col-lg-7 col-12">
+                                        <img src="./assets/images/carousel/exp-1.jpg" class="img-fluid" alt="plants">
+                                    </div>
+    
+                                    <div class="col-lg-5 col-12">
+                                        <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
+                                            <h4 class="mb-3">What are the products?</h4>
+    
+                                            <p class="p-about">Explore the wide range of products available in our shop, crafted to meet all your gardening and green living needs. Here’s what we offer:</p>
+    
+                                            <div class="skill-thumb mt-3">
+    
+                                                <strong>Plants </strong>
+                                                    <span class="float-end">90%</span>
+                                                        <div class="progress">
+                                                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                                                        </div>
+    
+                                                <strong>Supplements </strong>
+                                                    <span class="float-end">80%</span>
+                                                        <div class="progress">
+                                                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                                        </div>
+    
+                                                <strong>Gardening Tools</strong>
+                                                    <span class="float-end">80%</span>
+                                                        <div class="progress">
+                                                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                                                        </div>
+    
+                                            </div>
+                                            
+                                            <div class="mt-2 mt-lg-auto">
+                                                <a href="#deals" class="custom-link mb-2 grow">
+                                                    Explore products
+                                                    <i class="bi-arrow-right ms-2"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="deals">
+            <h1 class="offer-title">Our <span>Hottest</span> Deals</h1>
+            <div class="deal-wrapper">
+                <div class="timer-order-cta">
+                    <!--timer section-->
+                    <div class="timer">
+                        <div class="time">
+                            <p>Hours</p>
+                            <h3>07</h3>
+                        </div>
+                        <div class="time">
+                            <p>Minutes</p>
+                            <h3>56</h3>
+                        </div>
+                        <div class="time">
+                            <p>Seconds</p>
+                            <h3>30</h3>
+                        </div>
+                    </div>
+        
+                    <!--order cta section-->
+                    <div class="order-cta">
+                        <h1>Discount <span>79%</span> Off For Today's Deal</h1>
+                        <button class="deal-btn" onclick="document.querySelector('#shop').scrollIntoView({ behavior: 'smooth' })">
+                            Order Now <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+
+                </div>
+        
+                <!--offer cards-->
+                <div class="hot-deals-products">
+                    <!-- Strelitzia Nicolai -->
+                    <article class="product-item hot" data-category="plants">
+                        <span class="discount">-15%</span>
+                        <div class="feat-item-img hot">
+                            <img src="../assets/images/shop/plants/best_seller.png" alt="Strelitzia Nicolai">
+                        </div>
+                        <div class="feat-item-box">
+                            <div class="feat-item-name">
+                                <h4>Strelitzia Nicolai</h4>
+                            </div>
+                            <div class="feat-item-price">
+                                <span class="off-price">₱2700</span>
+                                <span>₱2300</span>
+                            </div>
+                            <div class="card-btns">
+                                <button class="btn-icon" title="Add to Cart" 
+                                        onclick="addToCart({
+                                            id: 2,
+                                            category: 'plants',
+                                            name: 'Strelitzia Nicolai',
+                                            price: 2300,
+                                            image: '../assets/images/shop/plants/best_seller.png',
+                                            description: 'Our most sought-after indoor plant, cherished for its lush foliage and air-purifying qualities. This hardy specimen thrives in various conditions, making it perfect for both beginners and experienced plant parents.',
+                                            care: {
+                                                water: 'Water every 7-10 days',
+                                                light: 'Adaptable to various light conditions',
+                                                temperature: 'Ideal in 65-80°F (18-27°C)'
+                                            }
+                                        })">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                        <path d="M12.5 17h-6.5v-14h-2"></path>
+                                        <path d="M6 5l14 1l-.86 6.017m-2.64 .983h-10.5"></path>
+                                        <path d="M16 19h6"></path>
+                                        <path d="M19 16v6"></path>
+                                    </svg>
+                                </button>
+                                <button class="btn-icon" title="Quick View" onclick="showProductDetails(2)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                        <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"></path>
+                                    </svg>
+                                </button>
+                                <button class="btn-icon wishlist-btn" 
+                                        title="Add to Wishlist"
+                                        onclick="handleWishlist({
+                                            id: 2,
+                                            category: 'plants',
+                                            name: 'Strelitzia Nicolai',
+                                            price: 2300,
+                                            image: '../assets/images/shop/plants/best_seller.png',
+                                            description: 'Our most sought-after indoor plant, cherished for its lush foliage and air-purifying qualities. This hardy specimen thrives in various conditions, making it perfect for both beginners and experienced plant parents.',
+                                            care: {
+                                                water: 'Water every 7-10 days',
+                                                light: 'Adaptable to various light conditions',
+                                                temperature: 'Ideal in 65-80°F (18-27°C)'
+                                            }
+                                        })">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" 
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Second Product -->
+                    <article class="product-item hot" data-category="plants">
+                        <span class="discount">-15%</span>
+                        <div class="feat-item-img hot">
+                            <img src="../assets/images/shop/plants/Dazzling Aglaonema.png" alt="Dazzling Aglaonema">
+                        </div>
+                        <div class="feat-item-box">
+                            <div class="feat-item-name">
+                                <h4>Dazzling Aglaonema</h4>
+                            </div>
+                            <div class="feat-item-price">
+                                <span class="off-price">₱2700</span>
+                                <span>₱2500</span>
+                            </div>
+                            <div class="card-btns">
+                                <button class="btn-icon" title="Add to Cart" 
+                                        onclick="addToCart({
+                                            id: 1,
+                                            category: 'plants',
+                                            name: 'Dazzling Aglaonema',
+                                            price: 2500,
+                                            image: '../assets/images/shop/plants/Dazzling Aglaonema.png'
+                                        })">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                        <path d="M12.5 17h-6.5v-14h-2"></path>
+                                        <path d="M6 5l14 1l-.86 6.017m-2.64 .983h-10.5"></path>
+                                        <path d="M16 19h6"></path>
+                                        <path d="M19 16v6"></path>
+                                    </svg>
+                                </button>
+                                <button class="btn-icon" title="Quick View" onclick="showProductDetails(1)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                                        <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"></path>
+                                    </svg>
+                                </button>
+                                <button class="btn-icon wishlist-btn" 
+                                        title="Add to Wishlist"
+                                        onclick="handleWishlist({
+                                            id: 1,
+                                            category: 'plants',
+                                            name: 'Dazzling Aglaonema',
+                                            price: 2500,
+                                            image: '../assets/images/shop/plants/Dazzling Aglaonema.png',
+                                            description: 'Transform your space with this stunning Aglaonema. Perfect for creating a tropical atmosphere, this plant adds a touch of luxury and natural beauty to any room. Its vibrant, variegated leaves create an elegant display while purifying your air naturally.',
+                                            care: {
+                                                water: 'Water weekly, allowing soil to dry between waterings',
+                                                light: 'Thrives in bright, indirect sunlight',
+                                                temperature: 'Maintains best growth at room temperature'
+                                            }
+                                        })">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" 
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    
+        <article>
+            <div class="modal-overlay" id="view-popover" popover>
+                <div class="modal-container">
+                    <button class="close-btn" popovertarget="view-popover" popovertargetaction="hide">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="modal-img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-info-1">
+                            <h3 class="item-title"></h3>
+                            <h4 class="item-price"></h4>
+                            <p class="item-desc"></p>
+                        </div>
+                        <div class="modal-info-2">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-tint"></i>
+                                </div>
+                                <p class="feature-text water-info"></p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-sun"></i>
+                                </div>
+                                <p class="feature-text light-info"></p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-thermometer-half"></i>
+                                </div>
+                                <p class="feature-text temp-info"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-bg"></div>
+            
+        </article>
+    
+        <section id="shop">
+
+            <div class="filter-container">
+
+                <h3 class="our-products">
+                    Our Products
+                </h3>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="plants">Plants</button>
+                    <button class="filter-btn" data-category="supplements">Supplements</button>
+                    <button class="filter-btn" data-category="tools">Tools</button>
+                </div>
+            </div>
+
+            <div class="shopContainer" id="productContainer"></div>
+        </section>
+
+        <section id="blogs">
+            <div class="blog-wrapper">
+                <div class="blog-title">
+                    <p class="blog-header">Blogs</p>
+                    <h1>Tips & Tricks From Our Blog</h1>
+                    <p class="b-title-p">Discover the benefits of herbal plants and natural remedies with our expert tips and tricks. Learn how to incorporate these powerful plants into your daily routine for a healthier lifestyle.</p>
+                </div>
+    
+                <!--Blog cards blog1, blog2, blog3-->
+                <div class="blog-cards">
+                    <!--Blog 1-->
+                    <div class="blog-card">
+                        <div class="blog-img-content">
+                            <div class="blog-image-container">
+                                <img src="./assets/images/blog/blog1.jpg" alt="blog">
+                            </div>
+                        </div>
+                        <!--Blog 1 content-->
+                        <div class="blog-content">
+                            <h3 class="blog-title">Herbs for Gut Health</h3>
+                            <p class="blog-description">Explore the best herbs to improve your digestion and overall gut health. From peppermint to ginger, find out how these natural remedies can benefit you.</p>
+                        </div>
+                        <a href="./pages/blog-1.html" class="blog-link">
+                            <button class="blog-btn">Read more</button>
+                        </a>
+                    </div>
+    
+                    <!--Blog 2-->
+                    <div class="blog-card">
+                        <div class="blog-img-content">
+                            <div class="blog-image-container">
+                                <img src="./assets/images/blog/blog2.jpg" alt="blog">
+                            </div>
+                        </div>
+                        <!--Blog 2 content-->
+                        <div class="blog-content">
+                            <h3 class="blog-title">9 Herbs To Grow In Your Garden This Spring!</h3>
+                            <p class="blog-description">Get ready for spring with these top 9 herbs to grow in your garden. Learn about their benefits and how to care for them to ensure a bountiful harvest.</p>
+                        </div>
+                        <a href="./pages/blog-2.html" class="blog-link">
+                            <button class="blog-btn">Read more</button>
+                        </a>
+                    </div>
+    
+                    <!--Blog 3-->
+                    <div class="blog-card">
+                        <div class="blog-img-content">
+                            <div class="blog-image-container">
+                                <img src="./assets/images/blog/blog3.jpg" alt="blog">
+                            </div>
+                        </div>
+                        <!--Blog 3 content-->
+                        <div class="blog-content">
+                            <h3 class="blog-title">Top 5 Herbal Teas for Relaxation</h3>
+                            <p class="blog-description">Discover the top 5 herbal teas that can help you unwind and relax. From chamomile to lavender, these teas offer a natural way to reduce stress and promote calm.</p>
+                        </div>
+                        <a href="./pages/blog-3.html" class="blog-link">
+                            <button class="blog-btn">Read more</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonial">
+            <div class="container1">
+                <div class="row1">
+                    <div class="col-lg-9 mx-auto col-11">
+                        <h2 class="customer-title">Customer feedback, <br> <span>ZEN</span> LEAF</h2>
+    
+                        <div class="slick-testimonial">
+                            <div class="slick-testimonial-caption">
+                                <p class="lead">"Absolutely love Zen Leaf! The variety of plants they offer <br>is amazing, and the staff is always so helpful in answering any questions I have about caring for my plants. It's become my go-to spot for all things green!"</p>
+                                <div class="slick-testimonial-client">
+                                    <img src="./assets/images/review/lisa.jpg" class="img-fluid custom-circle-image me-3" alt="">
+                                    <span>Samantha, <strong class="text-muted">Customer</strong></span>
+                                </div>
+                            </div>
+    
+                            <div class="slick-testimonial-caption">
+                                <p class="lead">"I had such a wonderful experience shopping at Zen Leaf. <br>The ambiance of the store is so calming, and it's clear that the staff are passionate about what they do. I left with a beautiful assortment of plants for my home and couldn't be happier."</p>
+                                <div class="slick-testimonial-client">
+                                    <img src="./assets/images/review/lisa.jpg" class="img-fluid custom-circle-image me-3" alt="">
+                                    <span>Jana, <strong class="text-muted">special customer</strong></span>
+                                </div>
+                            </div>
+    
+                            <div class="slick-testimonial-caption">
+                                <p class="lead">"Zen Leaf is hands down the best garden shop in town! Whether you're a seasoned gardener or just starting out, they have everything you need to create a beautiful outdoor space. Plus, their customer service is top-notch. I'll definitely be a loyal customer for years to come."</p>
+                                <div class="slick-testimonial-client">
+                                    <img src="./assets/images/review/lisa.jpg" class="img-fluid custom-circle-image me-3" alt="">
+                                    <span>Audrey, <strong class="text-muted">customer</strong></span>
+                                </div>
+                            </div>
+    
+                            <div class="slick-testimonial-caption">
+                                <p class="lead">"As someone new to gardening, I was a bit intimidated to start, but Zen Leaf made the experience so enjoyable and easy. The staff took the time to explain everything to me and even gave me some great tips for beginners. I'll definitely be back!"</p>
+                                <div class="slick-testimonial-client">
+                                    <img src="./assets/images/review/lisa.jpg" class="img-fluid custom-circle-image me-3" alt="">
+                                    <span>Anna, <strong class="text-muted">customer</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-left">
+                        <div class="contact-info">
+                            <div class="info-card">
+                                <i class="fas fa-phone"></i>
+                                <h3>Phone</h3>
+                                <p>+639201063627</p>
+                            </div>
+                            <div class="info-card">
+                                <i class="fab fa-viber"></i>
+                                <h3>Viber</h3>
+                                <p>+639201063627</p>
+                            </div>
+                            <div class="info-card">
+                                <i class="fas fa-envelope"></i>
+                                <h3>Email</h3>
+                                <p>audreylynmorana1504@gmail.com</p>
+                            </div>
+                            <div class="info-card">
+                                <i class="fas fa-store"></i>
+                                <h3>Our Shop</h3>
+                                <p>Punturin, Valenzuela City</p>
+                            </div>
+                        </div>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7717.035097908008!2d120.98956600000002!3d14.739846999999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfil!2sph!4v1736411417692!5m2!1sfil!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+    </main>
+
+    <footer id="footer" role="contentinfo">
+        <div class="container__footer">
+            <div class="zen-container">
+                <!-- Logo and description section -->
+                <div class="zen-wrapper">
+                    <div class="zen-img">
+                        <img src="./assets/images/icons/logo_footer.svg" alt="Zen Leaf Plants Service Logo">
+                    </div>
+                    <p class="footer-info">
+                        Your trusted source for premium plants, sustainable gardening supplies, and expert guidance. With over a decade of experience, we specialize in rare and exotic plants, organic plant care supplements, and professional gardening tools. Our commitment to quality and expert knowledge ensures your gardening success, while our sustainable practices support environmental stewardship. From beginners to seasoned plant enthusiasts, we're here to help you create and maintain your perfect green sanctuary.
+                    </p>
+                </div>
+
+                <!-- Navigation section -->
+                <nav>
+                    <ul class="list-link" role="navigation" aria-label="Footer navigation">
+                        <li><a class="footer-link" href="#hero-section">Home</a></li>
+                        <li><a class="footer-link" href="#about">About</a></li>
+                        <li><a class="footer-link" href="#deals">Shop</a></li>
+                        <li><a class="footer-link" href="#blogs">Blogs</a></li>
+                        <li><a class="footer-link" href="#testimonial">Reviews</a></li>
+                        <li><a class="footer-link" href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <hr>
+
+            <!-- Footer bottom section -->
+            <div class="footer-end">
+                <p class="footer__copy">© 2025 Zen Leaf Plants Service. All rights reserved</p>
+                <div class="footer__cards">
+                    <i class="pf pf-paypal footer__card" aria-label="PayPal"></i>
+                    <i class="pf pf-visa footer__card" aria-label="Visa"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/view-popover.js"></script>
+    <script src="./js/shop.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
