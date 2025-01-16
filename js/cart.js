@@ -1,11 +1,92 @@
-let cart=JSON.parse(localStorage.getItem('cart'))||[];let promoCode='';let discount=0;const promoCodes={'DISCOUNT10':10,'SAVE20':20,'FREESHIP':0};function addToCart(product){const existingItem=cart.find(item=>item.id===product.id);if(existingItem){existingItem.quantity+=1}else{cart.push({...product,quantity:1})}
-alert(`${product.name} has been added to your cart!`);updateCartStorage();updateCartUI()}
-function removeFromCart(productId){cart=cart.filter(item=>item.id!==productId);updateCartStorage();updateCartUI()}
-function updateQuantity(productId,newQuantity){const item=cart.find(item=>item.id===productId);if(item){item.quantity=Math.max(0,newQuantity);if(item.quantity===0){removeFromCart(productId)}else{updateCartStorage();updateCartUI()}}}
-function updateCartStorage(){localStorage.setItem('cart',JSON.stringify(cart))}
-function applyPromoCode(code){if(promoCodes.hasOwnProperty(code)){promoCode=code;discount=promoCodes[code];alert(`Promo code applied: ${code}`)}else{promoCode='';discount=0;alert('Invalid promo code!')}
-updateCartUI()}
-function updateCartUI(){const cartContainer=document.querySelector('.shopping-cart tbody');const cartItemCount=document.querySelector('.cart-no-items');const orderSummaryTotal=document.querySelector('.order-info:last-of-type h4:last-child');if(!cartContainer)return;const totalItems=cart.reduce((sum,item)=>sum+item.quantity,0);cartItemCount.textContent=`${totalItems} Items`;const totalCost=cart.reduce((sum,item)=>sum+(item.price*item.quantity),0);const discountedCost=discount>0?totalCost-(totalCost*discount/100):totalCost;orderSummaryTotal.textContent=`₱${discountedCost.toFixed(2)}`;cartContainer.innerHTML=cart.map(item=>`
+// Cart data structure
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let promoCode = ''; // Stores the current promo code applied
+let discount = 0; // Discount amount
+
+// Sample promo codes
+const promoCodes = {
+    'DISCOUNT10': 10, // 10% discount
+    'SAVE20': 20,     // 20% discount
+    'FREESHIP': 0     // No discount but adds free shipping (logic not implemented in this version)
+};
+
+// Cart operations
+function addToCart(product) {
+    const existingItem = cart.find(item => item.id === product.id);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            ...product,
+            quantity: 1
+        });
+    }
+
+    // Display alert when item is added to the cart
+    alert(`${product.name} has been added to your cart!`);
+
+    updateCartStorage();
+    updateCartUI();
+}
+
+function removeFromCart(productId) {
+    cart = cart.filter(item => item.id !== productId);
+    updateCartStorage();
+    updateCartUI();
+}
+
+function updateQuantity(productId, newQuantity) {
+    const item = cart.find(item => item.id === productId);
+    if (item) {
+        item.quantity = Math.max(0, newQuantity);
+        if (item.quantity === 0) {
+            removeFromCart(productId);
+        } else {
+            updateCartStorage();
+            updateCartUI();
+        }
+    }
+}
+
+function updateCartStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Promo code validation
+function applyPromoCode(code) {
+    if (promoCodes.hasOwnProperty(code)) {
+        promoCode = code;
+        discount = promoCodes[code];
+        alert(`Promo code applied: ${code}`);
+    } else {
+        promoCode = '';
+        discount = 0;
+        alert('Invalid promo code!');
+    }
+    updateCartUI();
+}
+
+// UI Updates
+function updateCartUI() {
+    const cartContainer = document.querySelector('.shopping-cart tbody');
+    const cartItemCount = document.querySelector('.cart-no-items');
+    const orderSummaryTotal = document.querySelector('.order-info:last-of-type h4:last-child');
+
+    if (!cartContainer) return;
+
+    // Update cart items count
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartItemCount.textContent = `${totalItems} Items`;
+
+    // Calculate total cost
+    const totalCost = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const discountedCost = discount > 0 ? totalCost - (totalCost * discount / 100) : totalCost;
+
+    orderSummaryTotal.textContent = `₱${discountedCost.toFixed(2)}`;
+
+    // Generate cart items HTML
+    cartContainer.innerHTML = cart.map(item => `
         <tr>
             <td>
             <div class="product-details">
@@ -44,5 +125,40 @@ function updateCartUI(){const cartContainer=document.querySelector('.shopping-ca
                 </div>
             </td>
         </tr>
-    `).join('')}
-document.addEventListener('DOMContentLoaded',()=>{const applyButton=document.querySelector('.apply-btn');const promoInput=document.querySelector('.promo-code input');applyButton.addEventListener('click',()=>{const code=promoInput.value.trim().toUpperCase();applyPromoCode(code)});updateCartUI()});document.addEventListener('DOMContentLoaded',()=>{const checkoutButton=document.querySelector('.checkout');if(checkoutButton){checkoutButton.addEventListener('click',function(e){e.preventDefault();cart=[];localStorage.removeItem('cart');updateCartUI();window.location.href='./thanks.html'})}})
+    `).join('');
+}
+
+// Event listener for promo code application
+document.addEventListener('DOMContentLoaded', () => {
+    const applyButton = document.querySelector('.apply-btn');
+    const promoInput = document.querySelector('.promo-code input');
+
+    applyButton.addEventListener('click', () => {
+        const code = promoInput.value.trim().toUpperCase();
+        applyPromoCode(code);
+    });
+
+    // Initialize cart UI
+    updateCartUI();
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+const checkoutButton = document.querySelector('.checkout');
+
+if (checkoutButton) {
+checkoutButton.addEventListener('click', function(e) {
+    e.preventDefault(); 
+    
+    cart = [];
+    
+    localStorage.removeItem('cart');
+    
+    updateCartUI();
+    
+    window.location.href = './thanks.html';
+});
+}
+});
+
