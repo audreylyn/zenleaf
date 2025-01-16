@@ -1,4 +1,4 @@
-const baseURL = 'https://audreylyn.github.io/zenleaf';
+const baseURL = 'https://audreylyn.github.io/zenleaf/assets';
 const products = [
     {
         id: 1,
