@@ -1,11 +1,11 @@
-const baseURL = 'https://audreylyn.github.io/zenleaf/assets';
+const baseURL = 'https://audreylyn.github.io/zenleaf';
 const products = [
     {
         id: 1,
         category: "plants",
         name: "Dazzling Aglaonema",
         price: 2500,
-        image: `${baseURL}/images/shop/plants/Dazzling Aglaonema.png`,
+        image: `${baseURL}/assets/images/shop/plants/Dazzling Aglaonema.png`,
         description: "Transform your space with this stunning Aglaonema. Perfect for creating a tropical atmosphere, this plant adds a touch of luxury and natural beauty to any room. Its vibrant, variegated leaves create an elegant display while purifying your air naturally.",
         care: {
             water: "Water weekly, allowing soil to dry between waterings",
@@ -18,7 +18,7 @@ const products = [
         category: "plants",
         name: "Strelitzia Nicolai",
         price: 2300,
-        image: `${baseURL}/images/shop/plants/best_seller.png`,
+        image: `${baseURL}/assets/images/shop/plants/best_seller.png`,
         description: "Our most sought-after indoor plant, cherished for its lush foliage and air-purifying qualities. This hardy specimen thrives in various conditions, making it perfect for both beginners and experienced plant parents.",
         care: {
             water: "Water every 7-10 days",
@@ -31,7 +31,7 @@ const products = [
         category: "plants",
         name: "Lavender Bliss",
         price: 4000,
-        image: `${baseURL}/images/shop/plants/Lavender Bliss.png`,
+        image: `${baseURL}/assets/images/shop/plants/Lavender Bliss.png`,
         description: "Experience the soothing presence of our premium lavender plant. Known for its calming fragrance and beautiful purple blooms, this plant brings the essence of Provence to your home. Perfect for gardens, patios, or sunny windowsills.",
         care: {
             water: "Keep soil lightly moist, water when top inch is dry",
@@ -44,7 +44,7 @@ const products = [
         category: "plants",
         name: "Fittonia Plant",
         price: 2200,
-        image: `${baseURL}/images/shop/plants/offer4.png`,
+        image: `${baseURL}/assets/images/shop/plants/offer4.png`,
         description: "A rare find at an exceptional value, this stunning plant features unique patterns and rich colors. Its compact size makes it perfect for desks and small spaces while still making a bold statement.",
         care: {
             water: "Moderate watering, once every 5-7 days",
@@ -57,7 +57,7 @@ const products = [
         category: "plants",
         name: "Sage Serenity",
         price: 2400,
-        image: `${baseURL}/images/shop/plants/Sage Serenity.png`,
+        image: `${baseURL}/assets/images/shop/plants/Sage Serenity.png`,
         description: "This elegant sage plant combines beauty with utility. Its silver-green leaves add a sophisticated touch to any space while providing aromatic herbs for your culinary adventures.",
         care: {
             water: "Allow soil to dry between waterings",
@@ -70,7 +70,7 @@ const products = [
         category: "supplements",
         name: "Ashwagandha",
         price: 1800,
-        image: `${baseURL}/images/shop/supplements/sup1.png`,
+        image: `${baseURL}/assets/images/shop/supplements/sup1.png`,
         description: "Premium organic Ashwagandha supplement, known for its stress-reducing and energy-boosting properties. Our carefully formulated capsules harness the full potential of this ancient adaptogenic herb.",
         care: {
             water: "1-2 capsules daily with meals",
@@ -83,7 +83,7 @@ const products = [
         category: "supplements",
         name: "Stevia Rebaudiana",
         price: 2000,
-        image: `${baseURL}/images/shop/supplements/sup2.png`,
+        image: `${baseURL}/assets/images/shop/supplements/sup2.png`,
         description: "Enhanced formula combining pure Stevia Rebaudiana with complementary herbs for maximum effectiveness. This advanced blend supports both mental clarity and physical vitality.",
         care: {
             water: "1 capsule twice daily",
@@ -96,7 +96,7 @@ const products = [
         category: "supplements",
         name: "Gotu Kola",
         price: 2200,
-        image: `${baseURL}/images/shop/supplements/sup4.png`,
+        image: `${baseURL}/assets/images/shop/supplements/sup4.png`,
         description: "Our premium grade Gotu Kola supplement, featuring high-potency extract in easy-to-absorb form. Each batch is tested for purity and potency to ensure superior quality.",
         care: {
             water: "1 capsule daily with breakfast",
@@ -109,7 +109,7 @@ const products = [
         category: "tools",
         name: "Garden Wheelbarrow",
         price: 3500,
-        image: `${baseURL}/images/shop/tools/barrow.png`,
+        image: `${baseURL}/assets/images/shop/tools/barrow.png`,
         description: "Heavy-duty wheelbarrow designed for serious gardeners. Features a rust-resistant steel frame and large pneumatic tire for easy maneuverability across any terrain.",
         care: {
             water: "6 cubic feet",
@@ -122,7 +122,7 @@ const products = [
         category: "tools",
         name: "Professional Garden Tools Set",
         price: 3000,
-        image: `${baseURL}/images/shop/tools/gt1.png`,
+        image: `${baseURL}/assets/images/shop/tools/gt1.png`,
         description: "Complete set of essential gardening tools crafted from high-grade stainless steel. Ergonomic handles provide comfort during extended use.",
         care: {
             water: "5-piece set",
@@ -135,7 +135,7 @@ const products = [
         category: "tools",
         name: "Premium Garden Tool Kit",
         price: 4500,
-        image: `${baseURL}/images/shop/tools/trowel.png`,
+        image: `${baseURL}/assets/images/shop/tools/trowel.png`,
         description: "Deluxe gardening kit featuring premium tools in a convenient carrying case. Perfect for both beginners and experienced gardeners.",
         care: {
             water: "8-piece set",
@@ -148,7 +148,7 @@ const products = [
         category: "tools",
         name: "Professional Trowel",
         price: 1500,
-        image: `${baseURL}/images/shop/tools/gt2.png`,
+        image: `${baseURL}/assets/images/shop/tools/gt2.png`,
         description: "Professional-grade garden trowel with graduated markings for precise planting depth. The rust-resistant blade and comfortable handle make it perfect for daily use.",
         care: {
             water: "12 inches total",
