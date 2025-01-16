@@ -1,4 +1,5 @@
 # Zen Leaf
+Demo URL: https://audreylyn.github.io/zenleaf/
 ## Overview
 Welcome to Zen Leaf, your premium destination for plants and gardening solutions. 
 This platform serves as a comprehensive e-commerce solution for plant enthusiasts, 
